@@ -1,20 +1,21 @@
 package com.studentmanage.controller;
 
-import com.studentmanage.model.dao.StudentDao;
+import com.studentmanage.model.dao.StudentDao_old;
 import com.studentmanage.model.vo.Student;
 import com.studentmanage.view.MainView;
 
 //Student를 관리하는 데 필요한 화면 기능, 데이터 저장 관리 기능 호출하는 역할
 public class StudentController {
 	
-	private StudentDao dao = new StudentDao();
+	private StudentDao_old dao = new StudentDao_old();
 	//view는 계속 호출해도 되지만 studentdao를 계속 호출하면 호출될 때마다 새로운 객체가 계속 생겨서 저장공간은 5개로
 	//제한해놓은 의미가 없음. 따라서 StudentController가 실행될 때 StudentDao객체가 1개 생성되도록 함.
 	//또한 그러면 StudentController가 실행될 때마다 새로운 객체가 생성되는 것이므로 mainMenu 한번 실행 당 한 개의
 	//객체가 존재하기 위해 mainView의 mainMenu에서 매개변수를 받음
 	
 	public void mainMenu() {
-		new MainView().mainMenu(this);
+		//StudentController stc = new StudentController();
+		new MainView().mainMenu(this);//new StudentController();
 	}//1. mainmenu 실행
 	
 	public void insertStudent() {

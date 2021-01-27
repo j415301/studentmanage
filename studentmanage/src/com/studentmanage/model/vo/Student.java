@@ -85,5 +85,10 @@ public class Student {
 	public int getCoding() {
 		return coding;
 	}
+	
+	public String toString() {
+		return name+"\t"+age+"\t"+school+"\t"+address+"\t"+kor+"\t"+eng+"\t"+math
+				+"\t"+coding;
+	}
 
 }
