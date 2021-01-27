@@ -66,7 +66,7 @@ public class StudentDao {
 		String name = s.getName();
 		for(int i=0 ; i<students.length ; i++) {
 			if (students[i].getName().equals(name)) {
-				students[i].toString();
+				System.out.println(students[i]);
 				flag = true;
 				break;
 			}
@@ -79,7 +79,7 @@ public class StudentDao {
 		int age = s.getAge();
 		for(int i=0 ; i<students.length ; i++) {
 			if (age==students[i].getAge()) {
-				students[i].toString();
+				System.out.println(students[i]);
 				flag = true;
 				break;
 			}
